@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bhatt Group — Catering, Restaurant, Events & Tech</title>
+<meta name="description" content="The Bhatt Group: Bhatt Caterers, Bhatt Restaurant, Bhatt Event Planner & Bhatt Tech & Support — Bardoli, Gujarat.">
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+<style>
+  :root{
+    --maroon: #7A1F2B;
+    --maroon-deep: #5A1620;
+    --gold: #D9A440;
+    --gold-soft: #EFD9A6;
+    --indigo: #2B2560;
+    --forest: #1E4D3B;
+    --cream: #F5EDE0;
+    --cream-deep: #ECE1CB;
+    --ink: #241B15;
+    --ink-soft: #5A4F42;
+    --line: rgba(36,27,21,0.14);
+  }
+ 
+  *{ margin:0; padding:0; box-sizing:border-box; }
+ 
+  html{ scroll-behavior: smooth; }
+ 
+  body{
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+ 
+  h1,h2,h3,h4{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--maroon-deep);
+  }
+ 
+  .eyebrow{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--forest);
+  }
+ 
+  a{ color: inherit; text-decoration: none; }
+ 
+  img{ max-width: 100%; display:block; }
+ 
+  .wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+ 
+  /* ---------- texture backdrop ---------- */
+  .grain{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+ 
+  /* ---------- header / nav ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(245,237,224,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 18px 32px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .brandmark{
+    display:flex;
+    align-items:center;
+    gap: 12px;
+  }
+  .brandmark svg{ width: 40px; height: 40px; }
+  .brandmark .name{
+    font-family:'Cormorant Garamond', serif;
+    font-size: 1.32rem;
+    font-weight: 700;
+    color: var(--maroon-deep);
+    letter-spacing: 0.01em;
+  }
+  .brandmark .name span{
+    display:block;
+    font-family:'Work Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-top: 1px;
+  }
+  nav.links{
+    display:flex;
+    gap: 32px;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  nav.links a{
+    position: relative;
+    padding-bottom: 4px;
+    color: var(--ink);
+    transition: color 0.2s ease;
+  }
+  nav.links a:hover{ color: var(--maroon); }
+  nav.links a::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:0;
+    width:0; height:1.5px;
+    background: var(--gold);
+    transition: width 0.25s ease;
+  }
+  nav.links a:hover::after{ width: 100%; }
+  .nav-toggle{ display:none; }
+ 
+  @media (max-width: 760px){
+    nav.links{ display:none; }
+  }
+ 
+  /* ---------- hero ---------- */
+  .hero{
+    position: relative;
+    padding: 96px 32px 120px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::before{
+    content:'';
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    width: 1400px;
+    height: 1400px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(217,164,64,0.16) 0%, rgba(217,164,64,0) 62%);
+    pointer-events: none;
+  }
+  .hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  .hero-eyebrow .rule{ width: 28px; height: 1px; background: var(--gold); }
+  .hero h1{
+    font-size: clamp(2.6rem, 6.4vw, 5.2rem);
+    line-height: 1.04;
+    max-width: 880px;
+    margin: 0 auto 22px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 em{
+    font-style: italic;
+    color: var(--maroon);
+  }
+  .hero p.lede{
+    max-width: 560px;
+    margin: 0 auto 40px;
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+  }
+  .hero-ctas{
+    display:flex;
+    gap: 16px;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    padding: 14px 30px;
+    border-radius: 2px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary{
+    background: var(--maroon);
+    color: var(--cream);
+    box-shadow: 0 6px 18px rgba(122,31,43,0.28);
+  }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 22px rgba(122,31,43,0.34); }
+  .btn-ghost{
+    border: 1px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn-ghost:hover{ background: var(--ink); color: var(--cream); }
+ 
+  /* four-business pill row */
+  .biz-row{
+    display:flex;
+    justify-content:center;
+    gap: 14px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .biz-pill{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    padding: 10px 18px 10px 10px;
+    background: rgba(255,255,255,0.55);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.86rem;
+    font-weight: 500;
+  }
+  .biz-pill svg{ width: 28px; height: 28px; }
+ 
+  /* ---------- thali divider (signature element) ---------- */
+  .thali-divider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 6px 0 6px;
+  }
+  .thali-divider svg{ width: 86px; height: 86px; opacity: 0.9; }
+ 
+  /* ---------- section shells ---------- */
+  section{ position: relative; }
+  .section-pad{ padding: 100px 32px; }
+  .section-head{
+    text-align:center;
+    max-width: 640px;
+    margin: 0 auto 64px;
+  }
+  .section-head .eyebrow{ display:block; margin-bottom: 14px; }
+  .section-head h2{ font-size: clamp(2rem, 4vw, 2.9rem); }
+  .section-head p{ color: var(--ink-soft); margin-top: 14px; font-size: 1.02rem; }
+ 
+  /* ---------- about / intro ---------- */
+  .about{ background: var(--cream-deep); }
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .about-art{
+    position: relative;
+    aspect-ratio: 1/1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .about-art svg{ width: 100%; height: 100%; }
+  .about-copy h2{ font-size: clamp(2rem, 3.6vw, 2.7rem); margin-bottom: 22px; }
+  .about-copy p{ color: var(--ink-soft); margin-bottom: 18px; font-size: 1.02rem; }
+  .about-stats{
+    display:flex;
+    gap: 36px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .stat .num{
+    font-family:'Cormorant Garamond', serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--maroon);
+    line-height: 1;
+  }
+  .stat .label{
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+ 
+  @media (max-width: 860px){
+    .about-grid{ grid-template-columns: 1fr; gap: 40px; }
+    .about-art{ order: -1; max-width: 320px; margin: 0 auto; }
+  }
+ 
+  /* ---------- business cards ---------- */
+  .businesses{ background: var(--cream); }
+  .biz-block{
+    display:grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items: center;
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .biz-block:last-child{ border-bottom: none; }
+  .biz-block.reverse{ grid-template-columns: 1.15fr 0.85fr; }
+  .biz-block.reverse .biz-visual{ order: 2; }
+  .biz-block.reverse .biz-copy{ order: 1; }
+ 
+  .biz-visual{
+    position: relative;
+    aspect-ratio: 4/3.2;
+    border-radius: 6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow: hidden;
+  }
+  .biz-visual svg{ width: 92%; height: 92%; }
+ 
+  .biz-tag{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+ 
+  .biz-copy h3{
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    margin-bottom: 14px;
+    display:flex;
+    align-items:center;
+    gap: 14px;
+  }
+  .biz-copy h3 .mini-logo{ width: 46px; height: 46px; flex-shrink:0; }
+  .biz-copy .tagline{
+    font-style: italic;
+    font-family:'Cormorant Garamond', serif;
+    font-size: 1.18rem;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .biz-copy p.desc{ color: var(--ink-soft); margin-bottom: 22px; font-size: 0.99rem; }
+  .biz-specialties{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .biz-specialties span{
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 13px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    background: rgba(255,255,255,0.5);
+  }
+  .biz-contact{
+    display:flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .biz-contact strong{ color: var(--ink); font-weight: 600; }
+ 
+  .placeholder-note{
+    font-size: 0.78rem;
+    color: var(--gold);
+    background: rgba(217,164,64,0.12);
+    border: 1px dashed rgba(217,164,64,0.5);
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+ 
+  /* color variants per business */
+  .biz-block[data-biz="caterers"] .biz-visual{ background: linear-gradient(160deg, #F1DFC0, #E8C98E); }
+  .biz-block[data-biz="caterers"] .biz-tag{ background: rgba(122,31,43,0.12); color: var(--maroon); }
+ 
+  .biz-block[data-biz="restaurant"] .biz-visual{ background: linear-gradient(160deg, #E3D6E8, #C9AED4); }
+  .biz-block[data-biz="restaurant"] .biz-tag{ background: rgba(43,37,96,0.12); color: var(--indigo); }
+ 
+  .biz-block[data-biz="events"] .biz-visual{ background: linear-gradient(160deg, #D7E5DC, #AECDBC); }
+  .biz-block[data-biz="events"] .biz-tag{ background: rgba(30,77,59,0.12); color: var(--forest); }
+ 
+  .biz-block[data-biz="tech"] .biz-visual{ background: linear-gradient(160deg, #DCE0EC, #B7C0DE); }
+  .biz-block[data-biz="tech"] .biz-tag{ background: rgba(43,37,96,0.12); color: var(--indigo); }
+ 
+  @media (max-width: 860px){
+    .biz-block, .biz-block.reverse{ grid-template-columns: 1fr; gap: 28px; }
+    .biz-block.reverse .biz-visual{ order: -1; }
+    .biz-block.reverse .biz-copy{ order: 2; }
+    .biz-visual{ max-width: 360px; margin: 0 auto; }
+  }
+ 
+  /* ---------- testimonial / quote strip ---------- */
+  .quote-strip{
+    background: var(--maroon-deep);
+    color: var(--gold-soft);
+    text-align:center;
+    padding: 80px 32px;
+  }
+  .quote-strip blockquote{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+    max-width: 760px;
+    margin: 0 auto 18px;
+    line-height: 1.4;
+  }
+  .quote-strip cite{
+    font-family:'Work Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+ 
+  /* ---------- contact / footer ---------- */
+  .contact{ background: var(--indigo); color: var(--cream); }
+  .contact .section-head h2{ color: var(--gold-soft); }
+  .contact .section-head p{ color: rgba(245,237,224,0.7); }
+  .contact .eyebrow{ color: var(--gold); }
+ 
+  .contact-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  .contact-card{
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 28px 22px;
+  }
+  .contact-card .mini-logo{ width: 38px; height: 38px; margin-bottom: 16px; }
+  .contact-card h4{ color: var(--gold-soft); font-size: 1.15rem; margin-bottom: 10px; }
+  .contact-card p{ font-size: 0.86rem; color: rgba(245,237,224,0.65); margin-bottom: 4px; }
+  .contact-card a.cta-link{
+    display:inline-block;
+    margin-top: 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--gold);
+    border-bottom: 1px solid rgba(217,164,64,0.4);
+  }
+ 
+  @media (max-width: 960px){
+    .contact-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px){
+    .contact-grid{ grid-template-columns: 1fr; }
+  }
+ 
+  footer{
+    background: var(--indigo);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 36px 32px 44px;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 18px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    gap: 12px;
+  }
+  .footer-brand svg{ width: 30px; height: 30px; }
+  .footer-brand span{
+    font-family:'Cormorant Garamond', serif;
+    color: var(--gold-soft);
+    font-size: 1.05rem;
+  }
+  .socials{
+    display:flex;
+    gap: 18px;
+  }
+  .socials a{
+    width: 38px; height: 38px;
+    display:flex; align-items:center; justify-content:center;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .socials a:hover{ background: var(--gold); transform: translateY(-2px); }
+  .socials svg{ width: 17px; height: 17px; fill: var(--gold-soft); }
+  .socials a:hover svg{ fill: var(--maroon-deep); }
+  .footer-fine{
+    text-align:center;
+    font-size: 0.76rem;
+    color: rgba(245,237,224,0.45);
+    margin-top: 28px;
+  }
+ 
+  /* reveal-on-scroll */
+  .reveal{
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in{ opacity: 1; transform: translateY(0); }
+ 
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity: 1; transform: none; transition: none; }
+    html{ scroll-behavior: auto; }
+  }
+ 
+  :focus-visible{
+    outline: 2px solid var(--maroon);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+ 
+<div class="grain"></div>
+ 
+<header>
+  <div class="nav">
+    <div class="brandmark">
+      <!-- THG emblem -->
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="var(--indigo)" stroke="var(--gold)" stroke-width="2"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="var(--cream)" stroke-width="1" opacity="0.5"/>
+        <text x="50" y="60" font-family="Cormorant Garamond, serif" font-size="34" font-weight="700" fill="var(--cream)" text-anchor="middle">B</text>
+      </svg>
+      <div class="name">The Bhatt Group<span>Since the family kitchen</span></div>
+    </div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#caterers">Caterers</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#events">Events</a>
+      <a href="#tech">Tech &amp; Support</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+ 
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span class="rule"></span>
+    <span class="eyebrow">Bardoli, Gujarat</span>
+    <span class="rule"></span>
+  </div>
+  <h1>One family name.<br><em>Four crafts,</em> served with care.</h1>
+  <p class="lede">From the kitchen to the venue to the screen — The Bhatt Group brings the same hospitality the family has cooked up for years, now across catering, dining, events and technology.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn btn-primary">Get in touch</a>
+    <a href="#about" class="btn btn-ghost">Meet the four businesses</a>
+  </div>
+ 
+  <div class="biz-row">
+    <div class="biz-pill">
+      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#7A1F2B"/><path d="M16 38 Q30 20 44 38" stroke="#F5EDE0" stroke-width="2.4" fill="none"/><circle cx="30" cy="26" r="6" fill="#F5EDE0"/></svg>
+      Bhatt Caterers
+    </div>
+    <div class="biz-pill">
+      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="18" y="20" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><line x1="22" y1="42" x2="38" y2="42" stroke="#F5EDE0" stroke-width="2"/></svg>
+      Bhatt Restaurant
+    </div>
+    <div class="biz-pill">
+      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#1E4D3B"/><path d="M30 16 L42 24 L42 38 L30 46 L18 38 L18 24 Z" fill="none" stroke="#F5EDE0" stroke-width="2"/></svg>
+      Bhatt Event Planner
+    </div>
+    <div class="biz-pill">
+      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="16" y="20" width="28" height="20" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><circle cx="30" cy="30" r="4" fill="#F5EDE0"/></svg>
+      Bhatt Tech &amp; Support
+    </div>
+  </div>
+</section>
+ 
+<div class="thali-divider">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#7A1F2B" stroke-width="1.4"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="#D9A440" stroke-width="1"/>
+    <circle cx="50" cy="50" r="6" fill="#7A1F2B"/>
+    <g stroke="#1E4D3B" stroke-width="1" fill="none" opacity="0.7">
+      <circle cx="50" cy="22" r="6"/>
+      <circle cx="74" cy="36" r="6"/>
+      <circle cx="74" cy="64" r="6"/>
+      <circle cx="50" cy="78" r="6"/>
+      <circle cx="26" cy="64" r="6"/>
+      <circle cx="26" cy="36" r="6"/>
+    </g>
+  </svg>
+</div>
+ 
+<!-- ================= ABOUT ================= -->
+<section class="about section-pad" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2>Started with one kitchen. Grown into a group.</h2>
+      <p>The Bhatt Group began with Bhatt Caterers — Gujarati, Punjabi and Chinese cooking made for weddings, functions and everyday celebrations around Bardoli and Gangadhara. What started as one family's kitchen has since grown into a small group of businesses, each carrying the same name and the same standard of care.</p>
+      <p>Today the group spans catering, dining, event planning and technology support — four different crafts, run with one shared belief: do right by the people you're serving.</p>
+      <div class="about-stats">
+        <div class="stat"><div class="num">04</div><div class="label">Businesses</div></div>
+        <div class="stat"><div class="num">1</div><div class="label">Family Name</div></div>
+        <div class="stat"><div class="num">3</div><div class="label">Cuisines Served</div></div>
+      </div>
+    </div>
+    <div class="about-art reveal">
+      <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="180" cy="180" r="172" fill="#EFD9A6" opacity="0.5"/>
+        <circle cx="180" cy="180" r="130" fill="none" stroke="#7A1F2B" stroke-width="1.5"/>
+        <g transform="translate(180,180)">
+          <g><circle cx="0" cy="-92" r="34" fill="#7A1F2B"/><path d="M-13 -100 Q0 -82 13 -100" stroke="#F5EDE0" stroke-width="2" fill="none"/></g>
+          <g><circle cx="80" cy="46" r="34" fill="#2B2560"/><rect x="68" y="34" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="1.6"/></g>
+          <g><circle cx="-80" cy="46" r="34" fill="#1E4D3B"/><path d="M-80 30 L-68 38 L-68 52 L-80 60 L-92 52 L-92 38 Z" fill="none" stroke="#F5EDE0" stroke-width="1.6"/></g>
+          <g><circle cx="0" cy="92" r="34" fill="#2B2560"/><rect x="-12" y="80" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="1.6"/><circle cx="0" cy="89" r="3" fill="#F5EDE0"/></g>
+          <circle cx="0" cy="0" r="40" fill="#D9A440"/>
+          <text x="0" y="9" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#5A1620" text-anchor="middle">THG</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+ 
+<div class="thali-divider">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#2B2560" stroke-width="1.4"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="#D9A440" stroke-width="1"/>
+    <circle cx="50" cy="50" r="6" fill="#2B2560"/>
+  </svg>
+</div>
+ 
+<!-- ================= BUSINESSES ================= -->
+<section class="businesses section-pad" id="businesses">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Four businesses, one standard of care</h2>
+      <p>Each business in the group has its own focus and its own mark — bound together by the Bhatt name.</p>
+    </div>
+ 
+    <!-- CATERERS -->
+    <div class="biz-block reveal" data-biz="caterers" id="caterers">
+      <div class="biz-visual">
+        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="80" r="58" fill="#7A1F2B"/>
+          <circle cx="100" cy="80" r="48" fill="none" stroke="#F5EDE0" stroke-width="1.2" opacity="0.5"/>
+          <path d="M70 100 Q100 60 130 100" stroke="#F5EDE0" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="100" cy="64" r="9" fill="#F5EDE0"/>
+          <circle cx="78" cy="96" r="5" fill="#D9A440"/>
+          <circle cx="122" cy="96" r="5" fill="#D9A440"/>
+          <circle cx="100" cy="104" r="5" fill="#D9A440"/>
+        </svg>
+      </div>
+      <div class="biz-copy">
+        <span class="biz-tag">Catering &amp; Functions</span>
+        <h3>
+          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#7A1F2B"/><path d="M16 38 Q30 20 44 38" stroke="#F5EDE0" stroke-width="2.4" fill="none"/><circle cx="30" cy="26" r="6" fill="#F5EDE0"/></svg>
+          Bhatt Caterers
+        </h3>
+        <p class="tagline">"Cooking & Restaurant" — by Sanjaybhai Ambalal Bhatt</p>
+        <p class="desc">Specialists in Gujarati, Punjabi and Chinese cuisine, cooked fresh for weddings, engagements, corporate events and family functions. Orders are prepared dish-by-dish on-site, with staff provided, so every plate reaches your guests exactly as it should.</p>
+        <div class="biz-specialties">
+          <span>Gujarati Thali</span>
+          <span>Punjabi Cuisine</span>
+          <span>Chinese Counter</span>
+          <span>On-site Cooking Staff</span>
+        </div>
+        <div class="biz-contact">
+          <div><strong>Address:</strong> Vrindavan Society, Gangadhara, Ta. Palsana</div>
+          <div><strong>Phone:</strong> 75740 30740</div>
+          <div><strong>Mobile:</strong> 98254 26240 · 94283 30740</div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- RESTAURANT -->
+    <div class="biz-block reverse reveal" data-biz="restaurant" id="restaurant">
+      <div class="biz-visual">
+        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="80" r="58" fill="#2B2560"/>
+          <rect x="68" y="56" width="64" height="44" rx="4" fill="none" stroke="#F5EDE0" stroke-width="2.4"/>
+          <line x1="78" y1="108" x2="122" y2="108" stroke="#F5EDE0" stroke-width="2.4"/>
+          <circle cx="100" cy="78" r="9" fill="#F5EDE0"/>
+        </svg>
+      </div>
+      <div class="biz-copy">
+        <span class="biz-tag">Dine-in</span>
+        <h3>
+          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="18" y="20" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><line x1="22" y1="42" x2="38" y2="42" stroke="#F5EDE0" stroke-width="2"/></svg>
+          Bhatt Restaurant
+        </h3>
+        <p class="tagline">A seat at the family table</p>
+        <p class="desc">The dine-in side of the Bhatt kitchen, bringing the same Gujarati, Punjabi and Chinese menu the family is known for to a sit-down table — for everyday meals as much as celebrations.</p>
+        <div class="biz-specialties">
+          <span>Dine-in Menu</span>
+          <span>Family Recipes</span>
+          <span>Walk-ins Welcome</span>
+        </div>
+        <div class="biz-contact">
+          <span class="placeholder-note">Menu, hours 10am to 10pm, address & photos to be added — share these and I'll update this section.</span>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- EVENTS -->
+    <div class="biz-block reveal" data-biz="events" id="events">
+      <div class="biz-visual">
+        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="80" r="58" fill="#1E4D3B"/>
+          <path d="M100 46 L130 64 L130 96 L100 114 L70 96 L70 64 Z" fill="none" stroke="#F5EDE0" stroke-width="2.4"/>
+          <circle cx="100" cy="80" r="10" fill="#F5EDE0"/>
+        </svg>
+      </div>
+      <div class="biz-copy">
+        <span class="biz-tag">Events &amp; Functions</span>
+        <h3>
+          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#1E4D3B"/><path d="M30 16 L42 24 L42 38 L30 46 L18 38 L18 24 Z" fill="none" stroke="#F5EDE0" stroke-width="2"/></svg>
+          Bhatt Event Planner
+        </h3>
+        <p class="tagline">Every detail, planned with care</p>
+        <p class="desc">From décor and venue coordination to the run of the day, Bhatt Event Planner takes the planning load off your shoulders — pairing naturally with Bhatt Caterers for weddings and family functions where the food and the event come from the same trusted hand.</p>
+        <div class="biz-specialties">
+          <span>Weddings</span>
+          <span>Corporate Events</span>
+          <span>Décor &amp; Coordination</span>
+        </div>
+        <div class="biz-contact">
+          <span class="placeholder-note">Services list, pricing & contact details to be added.</span>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- TECH -->
+    <div class="biz-block reverse reveal" data-biz="tech" id="tech">
+      <div class="biz-visual">
+        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="80" r="58" fill="#2B2560"/>
+          <rect x="66" y="58" width="68" height="46" rx="4" fill="none" stroke="#F5EDE0" stroke-width="2.4"/>
+          <circle cx="100" cy="81" r="9" fill="#F5EDE0"/>
+          <line x1="84" y1="112" x2="116" y2="112" stroke="#F5EDE0" stroke-width="2.4"/>
+        </svg>
+      </div>
+      <div class="biz-copy">
+        <span class="biz-tag">Technology Support</span>
+        <h3>
+          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="16" y="20" width="28" height="20" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><circle cx="30" cy="30" r="4" fill="#F5EDE0"/></svg>
+          Bhatt Tech &amp; Support
+        </h3>
+        <p class="tagline">The newest craft in the family</p>
+        <p class="desc">The group's technology arm, set up to support the family's other businesses and the wider community with practical, dependable tech help.</p>
+        <div class="biz-specialties">
+          <span>IT Support</span>
+          <span>Setup &amp; Maintenance</span>
+        </div>
+        <div class="biz-contact">
+          <span class="placeholder-note">Services, hours & contact details to be added.</span>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ================= QUOTE STRIP ================= -->
+<section class="quote-strip">
+  <blockquote>"One family, four crafts — but the same care goes into every plate, every plan, every fix."</blockquote>
+  <cite>The Bhatt Group</cite>
+</section>
+ 
+<!-- ================= CONTACT ================= -->
+<section class="contact section-pad" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Reach the business you need</h2>
+      <p>Each part of the group can be contacted directly, or follow along on Instagram and Facebook for updates.</p>
+    </div>
+ 
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#7A1F2B"/><path d="M16 38 Q30 20 44 38" stroke="#F5EDE0" stroke-width="2.4" fill="none"/><circle cx="30" cy="26" r="6" fill="#F5EDE0"/></svg>
+        <h4>Bhatt Caterers</h4>
+        <p>Vrindavan Society, Gangadhara, Ta. Palsana</p>
+        <p>(02622) 263740</p>
+        <p>98254 26240 · 94283 30740</p>
+        <a class="cta-link" href="tel:+919825426240">Call now →</a>
+      </div>
+      <div class="contact-card">
+        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="18" y="20" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><line x1="22" y1="42" x2="38" y2="42" stroke="#F5EDE0" stroke-width="2"/></svg>
+        <h4>Bhatt Restaurant</h4>
+        <p>Details coming soon</p>
+        <a class="cta-link" href="https://www.instagram.com/bhattresturant" target="_blank" rel="noopener">Follow on Instagram →</a>
+      </div>
+      <div class="contact-card">
+        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#1E4D3B"/><path d="M30 16 L42 24 L42 38 L30 46 L18 38 L18 24 Z" fill="none" stroke="#F5EDE0" stroke-width="2"/></svg>
+        <h4>Bhatt Event Planner</h4>
+        <p>Details coming soon</p>
+        <a class="cta-link" href="https://www.facebook.com/profile.php?id=61571997896087" target="_blank" rel="noopener">Find on Facebook →</a>
+      </div>
+      <div class="contact-card">
+        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="16" y="20" width="28" height="20" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><circle cx="30" cy="30" r="4" fill="#F5EDE0"/></svg>
+        <h4>Bhatt Tech &amp; Support</h4>
+        <p>Details coming soon</p>
+        <a class="cta-link" href="https://www.facebook.com/profile.php?id=100057658320773" target="_blank" rel="noopener">Find on Facebook →</a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#7A1F2B" stroke="#D9A440" stroke-width="2"/><text x="50" y="60" font-family="Cormorant Garamond, serif" font-size="34" font-weight="700" fill="#F5EDE0" text-anchor="middle">B</text></svg>
+      <span>The Bhatt Group</span>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/bhattresturant" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.25.07 1.63.07 4.81s0 3.56-.07 4.81c-.15 3.23-1.67 4.77-4.92 4.92-1.25.06-1.62.07-4.85.07s-3.6 0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.25-.07-1.63-.07-4.81s0-3.56.07-4.81C2.38 3.96 3.9 2.42 7.15 2.27 8.4 2.2 8.78 2.2 12 2.2zm0 1.8c-3.17 0-3.54 0-4.78.06-2.43.11-3.35 1.04-3.46 3.46-.06 1.24-.06 1.61-.06 4.78s0 3.55.06 4.78c.11 2.43 1.03 3.36 3.46 3.46 1.24.06 1.61.06 4.78.06s3.55 0 4.78-.06c2.43-.1 3.35-1.03 3.46-3.46.06-1.24.06-1.6.06-4.78s0-3.54-.06-4.78c-.11-2.42-1.03-3.35-3.46-3.46-1.24-.06-1.6-.06-4.78-.06zm0 3.9a5.1 5.1 0 110 10.2 5.1 5.1 0 010-10.2zm0 1.8a3.3 3.3 0 100 6.6 3.3 3.3 0 000-6.6zm5.4-3.18a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61571997896087" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M13.5 21v-7.7h2.6l.5-3h-3.1V8.4c0-.87.24-1.46 1.5-1.46h1.6V4.2c-.28-.04-1.23-.12-2.34-.12-2.32 0-3.9 1.42-3.9 4.02v2.2H7.2v3h2.65V21h3.65z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-fine">© 2026 The Bhatt Group · Bardoli, Gujarat · Built with care</div>
+</footer>
+ 
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+ 
+</body>
+</html>
