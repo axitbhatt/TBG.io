@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Bhatt Group — Catering, Restaurant, Events & Tech</title>
-<meta name="description" content="The Bhatt Group: Bhatt Caterers, Bhatt Restaurant, Bhatt Event Planner & Bhatt Tech & Support — Bardoli, Gujarat.">
- 
+<meta name="description" content="The Bhatt Group: Bhatt Caterers, Bhatt Restaurant, Bhatt Event Planner & Bhatt Tech & Support — Palsana, Gujarat.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- 
+
 <style>
   :root{
     --maroon: #7A1F2B;
@@ -24,11 +24,11 @@
     --ink-soft: #5A4F42;
     --line: rgba(36,27,21,0.14);
   }
- 
+
   *{ margin:0; padding:0; box-sizing:border-box; }
- 
+
   html{ scroll-behavior: smooth; }
- 
+
   body{
     background: var(--cream);
     color: var(--ink);
@@ -37,14 +37,14 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
- 
+
   h1,h2,h3,h4{
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     letter-spacing: 0.01em;
     color: var(--maroon-deep);
   }
- 
+
   .eyebrow{
     font-family: 'Work Sans', sans-serif;
     font-size: 0.72rem;
@@ -53,17 +53,17 @@
     text-transform: uppercase;
     color: var(--forest);
   }
- 
+
   a{ color: inherit; text-decoration: none; }
- 
+
   img{ max-width: 100%; display:block; }
- 
+
   .wrap{
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 32px;
   }
- 
+
   /* ---------- texture backdrop ---------- */
   .grain{
     position: fixed;
@@ -74,7 +74,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     mix-blend-mode: multiply;
   }
- 
+
   /* ---------- header / nav ---------- */
   header{
     position: sticky;
@@ -98,6 +98,7 @@
     gap: 12px;
   }
   .brandmark svg{ width: 40px; height: 40px; }
+  .brandmark img{ width: 42px; height: 42px; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 2px var(--gold); }
   .brandmark .name{
     font-family:'Cormorant Garamond', serif;
     font-size: 1.32rem;
@@ -138,11 +139,11 @@
   }
   nav.links a:hover::after{ width: 100%; }
   .nav-toggle{ display:none; }
- 
+
   @media (max-width: 760px){
     nav.links{ display:none; }
   }
- 
+
   /* ---------- hero ---------- */
   .hero{
     position: relative;
@@ -215,7 +216,7 @@
     color: var(--ink);
   }
   .btn-ghost:hover{ background: var(--ink); color: var(--cream); }
- 
+
   /* four-business pill row */
   .biz-row{
     display:flex;
@@ -237,7 +238,8 @@
     font-weight: 500;
   }
   .biz-pill svg{ width: 28px; height: 28px; }
- 
+  .biz-pill img{ width: 28px; height: 28px; object-fit: cover; border-radius: 50%; }
+
   /* ---------- thali divider (signature element) ---------- */
   .thali-divider{
     display:flex;
@@ -246,7 +248,7 @@
     padding: 6px 0 6px;
   }
   .thali-divider svg{ width: 86px; height: 86px; opacity: 0.9; }
- 
+
   /* ---------- section shells ---------- */
   section{ position: relative; }
   .section-pad{ padding: 100px 32px; }
@@ -258,7 +260,7 @@
   .section-head .eyebrow{ display:block; margin-bottom: 14px; }
   .section-head h2{ font-size: clamp(2rem, 4vw, 2.9rem); }
   .section-head p{ color: var(--ink-soft); margin-top: 14px; font-size: 1.02rem; }
- 
+
   /* ---------- about / intro ---------- */
   .about{ background: var(--cream-deep); }
   .about-grid{
@@ -275,6 +277,7 @@
     justify-content:center;
   }
   .about-art svg{ width: 100%; height: 100%; }
+  .about-art img{ width: 88%; height: auto; }
   .about-copy h2{ font-size: clamp(2rem, 3.6vw, 2.7rem); margin-bottom: 22px; }
   .about-copy p{ color: var(--ink-soft); margin-bottom: 18px; font-size: 1.02rem; }
   .about-stats{
@@ -297,12 +300,12 @@
     letter-spacing: 0.08em;
     margin-top: 4px;
   }
- 
+
   @media (max-width: 860px){
     .about-grid{ grid-template-columns: 1fr; gap: 40px; }
     .about-art{ order: -1; max-width: 320px; margin: 0 auto; }
   }
- 
+
   /* ---------- business cards ---------- */
   .businesses{ background: var(--cream); }
   .biz-block{
@@ -317,7 +320,7 @@
   .biz-block.reverse{ grid-template-columns: 1.15fr 0.85fr; }
   .biz-block.reverse .biz-visual{ order: 2; }
   .biz-block.reverse .biz-copy{ order: 1; }
- 
+
   .biz-visual{
     position: relative;
     aspect-ratio: 4/3.2;
@@ -328,7 +331,7 @@
     overflow: hidden;
   }
   .biz-visual svg{ width: 92%; height: 92%; }
- 
+
   .biz-tag{
     display:inline-flex;
     align-items:center;
@@ -341,15 +344,11 @@
     text-transform: uppercase;
     margin-bottom: 18px;
   }
- 
+
   .biz-copy h3{
     font-size: clamp(1.7rem, 2.6vw, 2.3rem);
     margin-bottom: 14px;
-    display:flex;
-    align-items:center;
-    gap: 14px;
   }
-  .biz-copy h3 .mini-logo{ width: 46px; height: 46px; flex-shrink:0; }
   .biz-copy .tagline{
     font-style: italic;
     font-family:'Cormorant Garamond', serif;
@@ -382,7 +381,7 @@
     margin-bottom: 24px;
   }
   .biz-contact strong{ color: var(--ink); font-weight: 600; }
- 
+
   .placeholder-note{
     font-size: 0.78rem;
     color: var(--gold);
@@ -393,27 +392,55 @@
     display: inline-block;
     margin-top: 4px;
   }
- 
+
   /* color variants per business */
   .biz-block[data-biz="caterers"] .biz-visual{ background: linear-gradient(160deg, #F1DFC0, #E8C98E); }
   .biz-block[data-biz="caterers"] .biz-tag{ background: rgba(122,31,43,0.12); color: var(--maroon); }
- 
+
   .biz-block[data-biz="restaurant"] .biz-visual{ background: linear-gradient(160deg, #E3D6E8, #C9AED4); }
   .biz-block[data-biz="restaurant"] .biz-tag{ background: rgba(43,37,96,0.12); color: var(--indigo); }
- 
+
   .biz-block[data-biz="events"] .biz-visual{ background: linear-gradient(160deg, #D7E5DC, #AECDBC); }
   .biz-block[data-biz="events"] .biz-tag{ background: rgba(30,77,59,0.12); color: var(--forest); }
- 
+
   .biz-block[data-biz="tech"] .biz-visual{ background: linear-gradient(160deg, #DCE0EC, #B7C0DE); }
   .biz-block[data-biz="tech"] .biz-tag{ background: rgba(43,37,96,0.12); color: var(--indigo); }
- 
+
   @media (max-width: 860px){
     .biz-block, .biz-block.reverse{ grid-template-columns: 1fr; gap: 28px; }
     .biz-block.reverse .biz-visual{ order: -1; }
     .biz-block.reverse .biz-copy{ order: 2; }
     .biz-visual{ max-width: 360px; margin: 0 auto; }
   }
- 
+
+  /* ---------- menu showcase ---------- */
+  .menu-showcase{
+    margin: 12px 0 8px;
+    padding: 40px 36px;
+    background: var(--cream-deep);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .menu-showcase-head{ margin-bottom: 24px; }
+  .menu-showcase-head h4{
+    font-size: 1.5rem;
+    margin-top: 6px;
+  }
+  .menu-board-frame{
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(36,27,21,0.16);
+    border: 1px solid var(--line);
+  }
+  .menu-board-frame img{ width: 100%; display:block; }
+  .menu-caption{
+    margin-top: 16px;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
   /* ---------- testimonial / quote strip ---------- */
   .quote-strip{
     background: var(--maroon-deep);
@@ -437,13 +464,13 @@
     text-transform: uppercase;
     opacity: 0.7;
   }
- 
+
   /* ---------- contact / footer ---------- */
   .contact{ background: var(--indigo); color: var(--cream); }
   .contact .section-head h2{ color: var(--gold-soft); }
   .contact .section-head p{ color: rgba(245,237,224,0.7); }
   .contact .eyebrow{ color: var(--gold); }
- 
+
   .contact-grid{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
@@ -455,7 +482,7 @@
     border-radius: 6px;
     padding: 28px 22px;
   }
-  .contact-card .mini-logo{ width: 38px; height: 38px; margin-bottom: 16px; }
+  .contact-card .mini-logo{ width: 44px; height: 44px; margin-bottom: 16px; object-fit: cover; }
   .contact-card h4{ color: var(--gold-soft); font-size: 1.15rem; margin-bottom: 10px; }
   .contact-card p{ font-size: 0.86rem; color: rgba(245,237,224,0.65); margin-bottom: 4px; }
   .contact-card a.cta-link{
@@ -466,14 +493,14 @@
     color: var(--gold);
     border-bottom: 1px solid rgba(217,164,64,0.4);
   }
- 
+
   @media (max-width: 960px){
     .contact-grid{ grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 600px){
     .contact-grid{ grid-template-columns: 1fr; }
   }
- 
+
   footer{
     background: var(--indigo);
     border-top: 1px solid rgba(255,255,255,0.12);
@@ -519,7 +546,7 @@
     color: rgba(245,237,224,0.45);
     margin-top: 28px;
   }
- 
+
   /* reveal-on-scroll */
   .reveal{
     opacity: 0;
@@ -527,12 +554,12 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
   .reveal.in{ opacity: 1; transform: translateY(0); }
- 
+
   @media (prefers-reduced-motion: reduce){
     .reveal{ opacity: 1; transform: none; transition: none; }
     html{ scroll-behavior: auto; }
   }
- 
+
   :focus-visible{
     outline: 2px solid var(--maroon);
     outline-offset: 3px;
@@ -540,19 +567,14 @@
 </style>
 </head>
 <body>
- 
+
 <div class="grain"></div>
- 
+
 <header>
   <div class="nav">
     <div class="brandmark">
-      <!-- THG emblem -->
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="48" fill="var(--indigo)" stroke="var(--gold)" stroke-width="2"/>
-        <circle cx="50" cy="50" r="40" fill="none" stroke="var(--cream)" stroke-width="1" opacity="0.5"/>
-        <text x="50" y="60" font-family="Cormorant Garamond, serif" font-size="34" font-weight="700" fill="var(--cream)" text-anchor="middle">B</text>
-      </svg>
-      <div class="name">The Bhatt Group<span>Since the family kitchen</span></div>
+      <img src="assets/group-emblem.jpg" alt="The Bhatt Group emblem">
+      <div class="name">The Bhatt Group<span>Est. 1982</span></div>
     </div>
     <nav class="links">
       <a href="#about">About</a>
@@ -564,41 +586,41 @@
     </nav>
   </div>
 </header>
- 
+
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-eyebrow">
     <span class="rule"></span>
-    <span class="eyebrow">Bardoli, Gujarat</span>
+    <span class="eyebrow">Palsana, Gujarat · Est. 1982</span>
     <span class="rule"></span>
   </div>
   <h1>One family name.<br><em>Four crafts,</em> served with care.</h1>
-  <p class="lede">From the kitchen to the venue to the screen — The Bhatt Group brings the same hospitality the family has cooked up for years, now across catering, dining, events and technology.</p>
+  <p class="lede">Since 1982, the Bhatt family has been cooking for Gujarat's celebrations. Today that same care runs across catering, dining, events and technology — one name, four crafts.</p>
   <div class="hero-ctas">
     <a href="#contact" class="btn btn-primary">Get in touch</a>
     <a href="#about" class="btn btn-ghost">Meet the four businesses</a>
   </div>
- 
+
   <div class="biz-row">
     <div class="biz-pill">
-      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#7A1F2B"/><path d="M16 38 Q30 20 44 38" stroke="#F5EDE0" stroke-width="2.4" fill="none"/><circle cx="30" cy="26" r="6" fill="#F5EDE0"/></svg>
+      <img src="assets/mark-caterers.jpg" alt="">
       Bhatt Caterers
     </div>
     <div class="biz-pill">
-      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="18" y="20" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><line x1="22" y1="42" x2="38" y2="42" stroke="#F5EDE0" stroke-width="2"/></svg>
-      Bhatt Restaurant
+      <img src="assets/mark-restaurant.jpg" alt="">
+      Bhatt Restaurant &amp; Banquets
     </div>
     <div class="biz-pill">
-      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#1E4D3B"/><path d="M30 16 L42 24 L42 38 L30 46 L18 38 L18 24 Z" fill="none" stroke="#F5EDE0" stroke-width="2"/></svg>
+      <img src="assets/mark-caterers.jpg" alt="">
       Bhatt Event Planner
     </div>
     <div class="biz-pill">
-      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="16" y="20" width="28" height="20" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><circle cx="30" cy="30" r="4" fill="#F5EDE0"/></svg>
+      <img src="assets/mark-tech.jpg" alt="">
       Bhatt Tech &amp; Support
     </div>
   </div>
 </section>
- 
+
 <div class="thali-divider">
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <circle cx="50" cy="50" r="46" fill="none" stroke="#7A1F2B" stroke-width="1.4"/>
@@ -614,38 +636,27 @@
     </g>
   </svg>
 </div>
- 
+
 <!-- ================= ABOUT ================= -->
 <section class="about section-pad" id="about">
   <div class="wrap about-grid">
     <div class="about-copy reveal">
       <span class="eyebrow">Our Story</span>
-      <h2>Started with one kitchen. Grown into a group.</h2>
-      <p>The Bhatt Group began with Bhatt Caterers — Gujarati, Punjabi and Chinese cooking made for weddings, functions and everyday celebrations around Bardoli and Gangadhara. What started as one family's kitchen has since grown into a small group of businesses, each carrying the same name and the same standard of care.</p>
-      <p>Today the group spans catering, dining, event planning and technology support — four different crafts, run with one shared belief: do right by the people you're serving.</p>
+      <h2>Started with one kitchen in 1982. Grown into a group.</h2>
+      <p>The Bhatt Group traces back to 1982, when the family began cooking for weddings and functions around Palsana and Gangadhara — Gujarati, Punjabi and Chinese food made fresh, counter by counter. That kitchen became Bhatt Caterers, and over time, Bhatt Restaurant &amp; Banquets, Bhatt Event Planner and Bhatt Tech &amp; Support joined it.</p>
+      <p>Four different crafts today, but one family name on all of them — and one shared standard: do right by the people you're serving.</p>
       <div class="about-stats">
+        <div class="stat"><div class="num">1982</div><div class="label">Established</div></div>
         <div class="stat"><div class="num">04</div><div class="label">Businesses</div></div>
-        <div class="stat"><div class="num">1</div><div class="label">Family Name</div></div>
         <div class="stat"><div class="num">3</div><div class="label">Cuisines Served</div></div>
       </div>
     </div>
     <div class="about-art reveal">
-      <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="180" cy="180" r="172" fill="#EFD9A6" opacity="0.5"/>
-        <circle cx="180" cy="180" r="130" fill="none" stroke="#7A1F2B" stroke-width="1.5"/>
-        <g transform="translate(180,180)">
-          <g><circle cx="0" cy="-92" r="34" fill="#7A1F2B"/><path d="M-13 -100 Q0 -82 13 -100" stroke="#F5EDE0" stroke-width="2" fill="none"/></g>
-          <g><circle cx="80" cy="46" r="34" fill="#2B2560"/><rect x="68" y="34" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="1.6"/></g>
-          <g><circle cx="-80" cy="46" r="34" fill="#1E4D3B"/><path d="M-80 30 L-68 38 L-68 52 L-80 60 L-92 52 L-92 38 Z" fill="none" stroke="#F5EDE0" stroke-width="1.6"/></g>
-          <g><circle cx="0" cy="92" r="34" fill="#2B2560"/><rect x="-12" y="80" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="1.6"/><circle cx="0" cy="89" r="3" fill="#F5EDE0"/></g>
-          <circle cx="0" cy="0" r="40" fill="#D9A440"/>
-          <text x="0" y="9" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#5A1620" text-anchor="middle">THG</text>
-        </g>
-      </svg>
+      <img src="assets/logo-group.jpeg" alt="The Bhatt Group emblem" style="border-radius: 12px; box-shadow: 0 18px 50px rgba(90,22,32,0.18);">
     </div>
   </div>
 </section>
- 
+
 <div class="thali-divider">
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <circle cx="50" cy="50" r="46" fill="none" stroke="#2B2560" stroke-width="1.4"/>
@@ -653,7 +664,7 @@
     <circle cx="50" cy="50" r="6" fill="#2B2560"/>
   </svg>
 </div>
- 
+
 <!-- ================= BUSINESSES ================= -->
 <section class="businesses section-pad" id="businesses">
   <div class="wrap">
@@ -662,136 +673,123 @@
       <h2>Four businesses, one standard of care</h2>
       <p>Each business in the group has its own focus and its own mark — bound together by the Bhatt name.</p>
     </div>
- 
+
     <!-- CATERERS -->
     <div class="biz-block reveal" data-biz="caterers" id="caterers">
-      <div class="biz-visual">
-        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="80" r="58" fill="#7A1F2B"/>
-          <circle cx="100" cy="80" r="48" fill="none" stroke="#F5EDE0" stroke-width="1.2" opacity="0.5"/>
-          <path d="M70 100 Q100 60 130 100" stroke="#F5EDE0" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <circle cx="100" cy="64" r="9" fill="#F5EDE0"/>
-          <circle cx="78" cy="96" r="5" fill="#D9A440"/>
-          <circle cx="122" cy="96" r="5" fill="#D9A440"/>
-          <circle cx="100" cy="104" r="5" fill="#D9A440"/>
-        </svg>
+      <div class="biz-visual" style="background:#F1E4C6;">
+        <img src="assets/logo-caterers-events.png" alt="Bhatt Caterers & Event Planner logo" style="width:78%;height:78%;object-fit:contain;">
       </div>
       <div class="biz-copy">
-        <span class="biz-tag">Catering &amp; Functions</span>
-        <h3>
-          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#7A1F2B"/><path d="M16 38 Q30 20 44 38" stroke="#F5EDE0" stroke-width="2.4" fill="none"/><circle cx="30" cy="26" r="6" fill="#F5EDE0"/></svg>
-          Bhatt Caterers
-        </h3>
-        <p class="tagline">"Cooking & Restaurant" — by Sanjaybhai Ambalal Bhatt</p>
-        <p class="desc">Specialists in Gujarati, Punjabi and Chinese cuisine, cooked fresh for weddings, engagements, corporate events and family functions. Orders are prepared dish-by-dish on-site, with staff provided, so every plate reaches your guests exactly as it should.</p>
+        <span class="biz-tag">Catering · Est. 1982</span>
+        <h3>Bhatt Caterers</h3>
+        <p class="tagline">Gujarati, Punjabi &amp; Chinese — cooked live, counter by counter</p>
+        <p class="desc">Run by Sanjaybhai Ambalal Bhatt, Bhatt Caterers specialises in Gujarati, Punjabi and Chinese cuisine for weddings, engagements and family functions. The signature "Abalal Thal" spread runs across live counters — Chinese, Farsan, Pasta, Dosa, Pizza, Rice, Shaak, Salad, Bhajiya and dessert counters — each prepared fresh on-site with cooking staff provided.</p>
         <div class="biz-specialties">
           <span>Gujarati Thali</span>
           <span>Punjabi Cuisine</span>
           <span>Chinese Counter</span>
+          <span>Live Pasta &amp; Dosa Counter</span>
           <span>On-site Cooking Staff</span>
         </div>
         <div class="biz-contact">
-          <div><strong>Address:</strong> Vrindavan Society, Gangadhara, Ta. Palsana</div>
-          <div><strong>Phone:</strong> 75740 30740</div>
+          <div><strong>Address:</strong> Opp. Nutan Bagayat, Vrindavan Society, Gangadhara, Ta. Palsana</div>
+          <div><strong>Phone:</strong> (02622) 263740</div>
           <div><strong>Mobile:</strong> 98254 26240 · 94283 30740</div>
         </div>
       </div>
     </div>
- 
+
+    <!-- MENU SHOWCASE -->
+    <div class="menu-showcase reveal">
+      <div class="menu-showcase-head">
+        <span class="eyebrow">The Abalal Thal Spread</span>
+        <h4>A taste of the live counter menu</h4>
+      </div>
+      <div class="menu-board-frame">
+        <img src="assets/menu-board.jpeg" alt="Bhatt Caterers Abalal Thal menu board showing Chinese, Farsan, Pasta, Dosa, Pizza, Rice, Shaak, Salad and Bhajiya counters">
+      </div>
+      <p class="menu-caption">Full menu board, available to view on-site and customisable for your event.</p>
+    </div>
+
     <!-- RESTAURANT -->
     <div class="biz-block reverse reveal" data-biz="restaurant" id="restaurant">
-      <div class="biz-visual">
-        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="80" r="58" fill="#2B2560"/>
-          <rect x="68" y="56" width="64" height="44" rx="4" fill="none" stroke="#F5EDE0" stroke-width="2.4"/>
-          <line x1="78" y1="108" x2="122" y2="108" stroke="#F5EDE0" stroke-width="2.4"/>
-          <circle cx="100" cy="78" r="9" fill="#F5EDE0"/>
-        </svg>
+      <div class="biz-visual" style="background:#EFE2C8;">
+        <img src="assets/logo-restaurant.jpeg" alt="Bhatt Restaurant & Banquets logo" style="width:78%;height:78%;object-fit:contain;">
       </div>
       <div class="biz-copy">
-        <span class="biz-tag">Dine-in</span>
-        <h3>
-          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="18" y="20" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><line x1="22" y1="42" x2="38" y2="42" stroke="#F5EDE0" stroke-width="2"/></svg>
-          Bhatt Restaurant
-        </h3>
+        <span class="biz-tag">Dine-in &amp; Banquets · Est. 1982</span>
+        <h3>Bhatt Restaurant &amp; Banquets</h3>
         <p class="tagline">A seat at the family table</p>
-        <p class="desc">The dine-in side of the Bhatt kitchen, bringing the same Gujarati, Punjabi and Chinese menu the family is known for to a sit-down table — for everyday meals as much as celebrations.</p>
+        <p class="desc">The dine-in and banquet side of the Bhatt kitchen — bringing the same Gujarati, Punjabi and Chinese menu the family is known for to a sit-down table, plus banquet hall hire for functions that need a venue as well as a menu. The Abalal Thal spread above is the menu — the same live counters, served whether you're hosting a function or walking in for a meal.</p>
         <div class="biz-specialties">
           <span>Dine-in Menu</span>
+          <span>Banquet Hall</span>
           <span>Family Recipes</span>
           <span>Walk-ins Welcome</span>
         </div>
         <div class="biz-contact">
-          <span class="placeholder-note">Menu, hours 10am to 10pm, address & photos to be added — share these and I'll update this section.</span>
+          <div><strong>Address:</strong> Surat-Bardoli Rd, Gangadhara Char Rasta, Gangadhara, Ta. Palsana, Di. Surat</div>
+          <div><strong>Hours:</strong> 10:00 AM – 10:00 PM, Monday to Sunday</div>
         </div>
       </div>
     </div>
- 
+
     <!-- EVENTS -->
     <div class="biz-block reveal" data-biz="events" id="events">
-      <div class="biz-visual">
-        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="80" r="58" fill="#1E4D3B"/>
-          <path d="M100 46 L130 64 L130 96 L100 114 L70 96 L70 64 Z" fill="none" stroke="#F5EDE0" stroke-width="2.4"/>
-          <circle cx="100" cy="80" r="10" fill="#F5EDE0"/>
-        </svg>
+      <div class="biz-visual" style="background:#F1E4C6;">
+        <img src="assets/logo-caterers-events.png" alt="Bhatt Caterers & Event Planner logo" style="width:78%;height:78%;object-fit:contain;">
       </div>
       <div class="biz-copy">
-        <span class="biz-tag">Events &amp; Functions</span>
-        <h3>
-          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#1E4D3B"/><path d="M30 16 L42 24 L42 38 L30 46 L18 38 L18 24 Z" fill="none" stroke="#F5EDE0" stroke-width="2"/></svg>
-          Bhatt Event Planner
-        </h3>
+        <span class="biz-tag">Events &amp; Functions · Est. 1982</span>
+        <h3>Bhatt Event Planner</h3>
         <p class="tagline">Every detail, planned with care</p>
         <p class="desc">From décor and venue coordination to the run of the day, Bhatt Event Planner takes the planning load off your shoulders — pairing naturally with Bhatt Caterers for weddings and family functions where the food and the event come from the same trusted hand.</p>
         <div class="biz-specialties">
-          <span>Weddings</span>
-          <span>Corporate Events</span>
-          <span>Décor &amp; Coordination</span>
+          <span>Weddings &amp; Receptions</span>
+          <span>Engagement &amp; Haldi-Mehndi</span>
+          <span>Birthday &amp; Baby Shower</span>
+          <span>Décor &amp; Theme Setup</span>
+          <span>DJ, Anchor &amp; Dhol Booking</span>
+          <span>Corporate &amp; Festival Events</span>
         </div>
         <div class="biz-contact">
-          <span class="placeholder-note">Services list, pricing & contact details to be added.</span>
+          <div><strong>Mobile:</strong> 94293 30740</div>
         </div>
       </div>
     </div>
- 
+
     <!-- TECH -->
     <div class="biz-block reverse reveal" data-biz="tech" id="tech">
-      <div class="biz-visual">
-        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="80" r="58" fill="#2B2560"/>
-          <rect x="66" y="58" width="68" height="46" rx="4" fill="none" stroke="#F5EDE0" stroke-width="2.4"/>
-          <circle cx="100" cy="81" r="9" fill="#F5EDE0"/>
-          <line x1="84" y1="112" x2="116" y2="112" stroke="#F5EDE0" stroke-width="2.4"/>
-        </svg>
+      <div class="biz-visual" style="background:#D9EEF5;">
+        <img src="assets/logo-tech.jpeg" alt="Bhatt Tech & Support logo" style="width:78%;height:78%;object-fit:contain;">
       </div>
       <div class="biz-copy">
         <span class="biz-tag">Technology Support</span>
-        <h3>
-          <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="16" y="20" width="28" height="20" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><circle cx="30" cy="30" r="4" fill="#F5EDE0"/></svg>
-          Bhatt Tech &amp; Support
-        </h3>
-        <p class="tagline">The newest craft in the family</p>
-        <p class="desc">The group's technology arm, set up to support the family's other businesses and the wider community with practical, dependable tech help.</p>
+        <h3>Bhatt Tech &amp; Support</h3>
+        <p class="tagline">DevOps · Infra · Cyber · IT</p>
+        <p class="desc">The newest craft in the family — run by brothers Axit and Yash Bhatt, Bhatt Tech &amp; Support brings practical, dependable technology help to the group's other businesses and the wider community, covering DevOps, infrastructure design, cybersecurity and general IT support.</p>
         <div class="biz-specialties">
+          <span>DevOps</span>
+          <span>Infrastructure Design</span>
+          <span>Cybersecurity</span>
           <span>IT Support</span>
-          <span>Setup &amp; Maintenance</span>
         </div>
         <div class="biz-contact">
-          <span class="placeholder-note">Services, hours & contact details to be added.</span>
+          <div><strong>Yash:</strong> 63546 86763</div>
+          <div><strong>Axit:</strong> 98985 34348</div>
         </div>
       </div>
     </div>
- 
+
   </div>
 </section>
- 
+
 <!-- ================= QUOTE STRIP ================= -->
 <section class="quote-strip">
   <blockquote>"One family, four crafts — but the same care goes into every plate, every plan, every fix."</blockquote>
   <cite>The Bhatt Group</cite>
 </section>
- 
+
 <!-- ================= CONTACT ================= -->
 <section class="contact section-pad" id="contact">
   <div class="wrap">
@@ -800,10 +798,10 @@
       <h2>Reach the business you need</h2>
       <p>Each part of the group can be contacted directly, or follow along on Instagram and Facebook for updates.</p>
     </div>
- 
+
     <div class="contact-grid reveal">
       <div class="contact-card">
-        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#7A1F2B"/><path d="M16 38 Q30 20 44 38" stroke="#F5EDE0" stroke-width="2.4" fill="none"/><circle cx="30" cy="26" r="6" fill="#F5EDE0"/></svg>
+        <img class="mini-logo" src="assets/mark-caterers.jpg" alt="" style="border-radius:8px;">
         <h4>Bhatt Caterers</h4>
         <p>Vrindavan Society, Gangadhara, Ta. Palsana</p>
         <p>(02622) 263740</p>
@@ -811,31 +809,34 @@
         <a class="cta-link" href="tel:+919825426240">Call now →</a>
       </div>
       <div class="contact-card">
-        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="18" y="20" width="24" height="18" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><line x1="22" y1="42" x2="38" y2="42" stroke="#F5EDE0" stroke-width="2"/></svg>
-        <h4>Bhatt Restaurant</h4>
-        <p>Details coming soon</p>
+        <img class="mini-logo" src="assets/mark-restaurant.jpg" alt="" style="border-radius:8px;">
+        <h4>Bhatt Restaurant &amp; Banquets</h4>
+        <p>Surat-Bardoli Rd, Gangadhara Char Rasta, Palsana</p>
+        <p>Open 10 AM – 10 PM, all week</p>
         <a class="cta-link" href="https://www.instagram.com/bhattresturant" target="_blank" rel="noopener">Follow on Instagram →</a>
       </div>
       <div class="contact-card">
-        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#1E4D3B"/><path d="M30 16 L42 24 L42 38 L30 46 L18 38 L18 24 Z" fill="none" stroke="#F5EDE0" stroke-width="2"/></svg>
+        <img class="mini-logo" src="assets/mark-caterers.jpg" alt="" style="border-radius:8px;">
         <h4>Bhatt Event Planner</h4>
-        <p>Details coming soon</p>
-        <a class="cta-link" href="https://www.facebook.com/profile.php?id=61571997896087" target="_blank" rel="noopener">Find on Facebook →</a>
+        <p>Weddings, receptions &amp; celebrations</p>
+        <p>94293 30740</p>
+        <a class="cta-link" href="tel:+919429330740">Call now →</a>
       </div>
       <div class="contact-card">
-        <svg class="mini-logo" viewBox="0 0 60 60"><circle cx="30" cy="30" r="29" fill="#2B2560"/><rect x="16" y="20" width="28" height="20" rx="2" fill="none" stroke="#F5EDE0" stroke-width="2"/><circle cx="30" cy="30" r="4" fill="#F5EDE0"/></svg>
+        <img class="mini-logo" src="assets/mark-tech.jpg" alt="" style="border-radius:8px;">
         <h4>Bhatt Tech &amp; Support</h4>
-        <p>Details coming soon</p>
-        <a class="cta-link" href="https://www.facebook.com/profile.php?id=100057658320773" target="_blank" rel="noopener">Find on Facebook →</a>
+        <p>Yash: 63546 86763</p>
+        <p>Axit: 98985 34348</p>
+        <a class="cta-link" href="tel:+916354686763">Call Yash →</a>
       </div>
     </div>
   </div>
 </section>
- 
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#7A1F2B" stroke="#D9A440" stroke-width="2"/><text x="50" y="60" font-family="Cormorant Garamond, serif" font-size="34" font-weight="700" fill="#F5EDE0" text-anchor="middle">B</text></svg>
+      <img src="assets/group-emblem.jpg" alt="" style="width:30px;height:30px;border-radius:50%;object-fit:cover;">
       <span>The Bhatt Group</span>
     </div>
     <div class="socials">
@@ -847,9 +848,9 @@
       </a>
     </div>
   </div>
-  <div class="footer-fine">© 2026 The Bhatt Group · Bardoli, Gujarat · Built with care</div>
+  <div class="footer-fine">© 2026 The Bhatt Group · Palsana, Gujarat · Built with care</div>
 </footer>
- 
+
 <script>
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
@@ -857,6 +858,6 @@
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
 </script>
- 
+
 </body>
 </html>
